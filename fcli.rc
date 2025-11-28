@@ -1,0 +1,3 @@
+TOPO_FILE="asym-vni.clab.yml"
+alias fcli="docker run -t --rm --network intent-lab -v /etc/hosts:/etc/hosts:ro -v ${PWD}/${TOPO_FILE}:/topo.yml ghcr.io/srl-labs/nornir-srl -t /topo.yml"
+

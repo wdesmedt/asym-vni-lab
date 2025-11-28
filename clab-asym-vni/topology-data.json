@@ -1,0 +1,523 @@
+{
+  "name": "asym-vni",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-a3b121255701",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICcyvXBmsJjUh5PlWW3Bl4JC4C4aTJRBGBL5SxhjpVDf","ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCxXYBwte3dr5RgSN7fy/FhD4VIqmOv8zfYr9d9VZj+miiGbmnJc0G5TdhpQFoeQnUdIO9a61cDqb3+2+I4EGfgJICPNsHvyfg2m+vP2jzGkyEQ58R2zohWwI9f3T3KKo/+jFPgwgqW5hnnxB/57o1vGwCjocvwMJkjpIwIXFVsQuDIbPvkxFKoJrtzwKZLI4W5yATRWLHJsK5Dm6TRIrhDpJMTQVEzeLhljIE9YxXA38HAsMFIxzr/iBGvLoVapSCPP/rFPV6lcseO4kdROfHdMXFj5Ib6uVKOicqlvq3kc49fgrcD85674V1rM0xbev63RCg16GscgeAob0h0MozTX0cTwr8JY78luoq0KEQV0HNzyCMamS2sKVrsZZBSHjeSgAbhourAX+l67ZZ54PZX9WPEoHhd7DKmKz5iiWi57LzBw4C8lj857xrAK0rBXGIQg7/VqFDWDMgVHKPid8TLKG01GJY01mGBniXVHw+srMktA6n60soRJv2YJr2MhX0=","ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDCvf2C4WMISKa4x9kOeaDvLC8346hKsVYu5iFQUicuUNhIDNLIK16mb02EXTKzFG2Owd7XQIzqmq4dSdWiBnqmhW03gndAx8fhfc/7qKC6m5CKbJ8UlYHlnwvpAo3gEkbGrS3tktW38UtEV8npI0SJHGT0L0Gu3FdmqBvZgEW1aKQGVJuJe8rH/pa8iFglvqcwlZuQJKDVOgQkC46/ayPpvHBovj85wgQn8159Hh2sgtkRVWTA3J5GnRQcTEOP6LjfQbyyqqdwX2YnHytggj3gDhPD6B0pCUDDZ0vgLbrQFF4+VUn2wYd0pSBakt6LjJZ2bx462ovQI4TfjPZCmdGCGpHkAMLDBum9k7wMD25Y6q4jG50GVsNy18Qvo+IVSBPv8o/0ZOIxPy1Yt+QGeZvNw/2KHgGKB6oO61y3NtMIAbmRQ5/PRE0ZDKxj1PoqtHARDYyS5s1La/ND3hFlGSpsnwwfYk4Zn2oSLau7Dtkxkg0b3Vz/yyzExFvkgamKoQk=","ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICPK6095wkaTfROIMORsot3R7NpLD2ApEjfy+33EHHVu"],
+  "nodes": {
+    "host011": {
+      "index": "0",
+      "shortname": "host011",
+      "longname": "host011",
+      "fqdn": "host011.asym-vni.io",
+      "group": "",
+      "labdir": "/home/wds/github/asym-vni-lab/clab-asym-vni/host011",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a3b121255701",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/wds/github/asym-vni-lab/clab-asym-vni/host011",
+        "clab-node-longname": "host011",
+        "clab-node-name": "host011",
+        "clab-node-type": "",
+        "clab-owner": "wds",
+        "clab-topo-file": "/home/wds/github/asym-vni-lab/asym-vni.clab.yml",
+        "containerlab": "asym-vni"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host021": {
+      "index": "1",
+      "shortname": "host021",
+      "longname": "host021",
+      "fqdn": "host021.asym-vni.io",
+      "group": "",
+      "labdir": "/home/wds/github/asym-vni-lab/clab-asym-vni/host021",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a3b121255701",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/wds/github/asym-vni-lab/clab-asym-vni/host021",
+        "clab-node-longname": "host021",
+        "clab-node-name": "host021",
+        "clab-node-type": "",
+        "clab-owner": "wds",
+        "clab-topo-file": "/home/wds/github/asym-vni-lab/asym-vni.clab.yml",
+        "containerlab": "asym-vni"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host031": {
+      "index": "2",
+      "shortname": "host031",
+      "longname": "host031",
+      "fqdn": "host031.asym-vni.io",
+      "group": "",
+      "labdir": "/home/wds/github/asym-vni-lab/clab-asym-vni/host031",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a3b121255701",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/wds/github/asym-vni-lab/clab-asym-vni/host031",
+        "clab-node-longname": "host031",
+        "clab-node-name": "host031",
+        "clab-node-type": "",
+        "clab-owner": "wds",
+        "clab-topo-file": "/home/wds/github/asym-vni-lab/asym-vni.clab.yml",
+        "containerlab": "asym-vni"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "leaf1": {
+      "index": "3",
+      "shortname": "leaf1",
+      "longname": "leaf1",
+      "fqdn": "leaf1.asym-vni.io",
+      "group": "leaf",
+      "labdir": "/home/wds/github/asym-vni-lab/clab-asym-vni/leaf1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:56:03:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a3b121255701",
+        "clab-node-group": "leaf",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/wds/github/asym-vni-lab/clab-asym-vni/leaf1",
+        "clab-node-longname": "leaf1",
+        "clab-node-name": "leaf1",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "wds",
+        "clab-topo-file": "/home/wds/github/asym-vni-lab/asym-vni.clab.yml",
+        "containerlab": "asym-vni"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf2": {
+      "index": "4",
+      "shortname": "leaf2",
+      "longname": "leaf2",
+      "fqdn": "leaf2.asym-vni.io",
+      "group": "leaf",
+      "labdir": "/home/wds/github/asym-vni-lab/clab-asym-vni/leaf2",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:f8:04:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a3b121255701",
+        "clab-node-group": "leaf",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/wds/github/asym-vni-lab/clab-asym-vni/leaf2",
+        "clab-node-longname": "leaf2",
+        "clab-node-name": "leaf2",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "wds",
+        "clab-topo-file": "/home/wds/github/asym-vni-lab/asym-vni.clab.yml",
+        "containerlab": "asym-vni"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf3": {
+      "index": "5",
+      "shortname": "leaf3",
+      "longname": "leaf3",
+      "fqdn": "leaf3.asym-vni.io",
+      "group": "leaf",
+      "labdir": "/home/wds/github/asym-vni-lab/clab-asym-vni/leaf3",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:81:05:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a3b121255701",
+        "clab-node-group": "leaf",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/wds/github/asym-vni-lab/clab-asym-vni/leaf3",
+        "clab-node-longname": "leaf3",
+        "clab-node-name": "leaf3",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "wds",
+        "clab-topo-file": "/home/wds/github/asym-vni-lab/asym-vni.clab.yml",
+        "containerlab": "asym-vni"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine1": {
+      "index": "6",
+      "shortname": "spine1",
+      "longname": "spine1",
+      "fqdn": "spine1.asym-vni.io",
+      "group": "spine",
+      "labdir": "/home/wds/github/asym-vni-lab/clab-asym-vni/spine1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:0c:06:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a3b121255701",
+        "clab-node-group": "spine",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/wds/github/asym-vni-lab/clab-asym-vni/spine1",
+        "clab-node-longname": "spine1",
+        "clab-node-name": "spine1",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "wds",
+        "clab-topo-file": "/home/wds/github/asym-vni-lab/asym-vni.clab.yml",
+        "containerlab": "asym-vni"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine2": {
+      "index": "7",
+      "shortname": "spine2",
+      "longname": "spine2",
+      "fqdn": "spine2.asym-vni.io",
+      "group": "spine",
+      "labdir": "/home/wds/github/asym-vni-lab/clab-asym-vni/spine2",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:e2:07:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a3b121255701",
+        "clab-node-group": "spine",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/wds/github/asym-vni-lab/clab-asym-vni/spine2",
+        "clab-node-longname": "spine2",
+        "clab-node-name": "spine2",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "wds",
+        "clab-topo-file": "/home/wds/github/asym-vni-lab/asym-vni.clab.yml",
+        "containerlab": "asym-vni"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "spine1",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:32:a6:ab",
+          "peer": "z"
+        },
+        "z": {
+          "node": "leaf1",
+          "interface": "e1-49",
+          "mac": "aa:c1:ab:d9:c4:33",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "spine1",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:65:3d:8c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "leaf2",
+          "interface": "e1-49",
+          "mac": "aa:c1:ab:e4:33:b9",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "spine1",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:0b:56:c4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "leaf3",
+          "interface": "e1-49",
+          "mac": "aa:c1:ab:7e:73:0c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "spine2",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:77:f3:c9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "leaf1",
+          "interface": "e1-50",
+          "mac": "aa:c1:ab:67:0b:78",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "spine2",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:25:17:c3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "leaf2",
+          "interface": "e1-50",
+          "mac": "aa:c1:ab:a8:c8:59",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "spine2",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:a8:fa:99",
+          "peer": "z"
+        },
+        "z": {
+          "node": "leaf3",
+          "interface": "e1-50",
+          "mac": "aa:c1:ab:3c:76:d2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "leaf1",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:23:62:e4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "host011",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:b4:48:37",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "leaf2",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:a3:af:74",
+          "peer": "z"
+        },
+        "z": {
+          "node": "host021",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:f0:f2:a3",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "leaf3",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:8f:b0:ef",
+          "peer": "z"
+        },
+        "z": {
+          "node": "host031",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:26:ff:a0",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

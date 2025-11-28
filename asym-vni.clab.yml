@@ -1,0 +1,63 @@
+name: asym-vni
+prefix: ""
+
+topology:
+  defaults:
+    kind: nokia_srlinux
+
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:25.10.1
+      type: ixr-d2l
+    linux:
+      image: ghcr.io/srl-labs/network-multitool:latest
+  nodes:
+    leaf1:
+      kind: nokia_srlinux
+      group: leaf
+    leaf2:
+      kind: nokia_srlinux
+      group: leaf
+    leaf3:
+      kind: nokia_srlinux
+      group: leaf
+    spine1:
+      kind: nokia_srlinux
+      group: spine
+    spine2:
+      kind: nokia_srlinux
+      group: spine
+    host011:
+      kind: linux
+      exec:
+        - ip link add link eth1 eth1.1 type vlan id 1
+        - ip link set eth1.1 up
+        - ip addr add 10.0.0.1/24 dev eth1.1
+        - ip route add 0/1 via 10.0.0.254
+    host021:
+      kind: linux
+      exec:
+        - ip link add link eth1 eth1.1 type vlan id 1
+        - ip link set eth1.1 up
+        - ip addr add 10.0.0.2/24 dev eth1.1
+        - ip route add 0/1 via 10.0.0.254
+    host031:
+      kind: linux
+      binds:
+        - cfg/host031.sh:/tmp/init.sh
+      exec:
+        - /bin/sh /tmp/init.sh
+    
+  links:
+    - endpoints: ["spine1:e1-1", "leaf1:e1-49"]
+    - endpoints: ["spine1:e1-2", "leaf2:e1-49"]
+    - endpoints: ["spine1:e1-3", "leaf3:e1-49"]
+    - endpoints: ["spine2:e1-1", "leaf1:e1-50"]
+    - endpoints: ["spine2:e1-2", "leaf2:e1-50"]
+    - endpoints: ["spine2:e1-3", "leaf3:e1-50"]
+    - endpoints: ["leaf1:e1-1", "host011:eth1"]
+    - endpoints: ["leaf2:e1-1", "host021:eth1"]
+    - endpoints: ["leaf3:e1-1", "host031:eth1"]
+
+
+
