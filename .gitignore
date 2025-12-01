@@ -3,9 +3,7 @@
 *sav
 license*
 *.bak
-startup
 .vscode
 /vault*
 __pycache__/
 *.py[cod]
-config*
