@@ -16,7 +16,7 @@ This repository contains a Containerlab topology for testing and demonstrating a
 
 ## Topology
 
-![Network Topology](asym_vni.drawio.png)
+![Network Topology](asym_vni.drawio.svg)
 
 ## Usage
 
@@ -33,8 +33,7 @@ sudo containerlab destroy -t topology.yml
 ## Lab Files
 
 - `topology.yml` - Containerlab topology definition
-- `asym_vni.drawio` - Network topology asym_vni (editable with draw.io)
-- `asym_vni.drawio.png` - Exported PNG of the topology asym_vni
+- `asym_vni.drawio.svg` - Network topology asym_vni (editable with draw.io)
 
 ## Configuration
 
