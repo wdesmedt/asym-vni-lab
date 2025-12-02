@@ -22,12 +22,12 @@ This repository contains a Containerlab topology for testing and demonstrating a
 
 Deploy the lab:
 ```bash
-sudo containerlab deploy -t topology.yml
+containerlab deploy -t asym-vni.clab.yml
 ```
 
 Destroy the lab:
 ```bash
-sudo containerlab destroy -t topology.yml
+containerlab destroy -t asym-vni.clab.yml
 ```
 
 ## Lab Files
