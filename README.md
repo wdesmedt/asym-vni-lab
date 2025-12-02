@@ -34,7 +34,10 @@ containerlab destroy -t asym-vni.clab.yml
 
 - `asym-vni.clab.yml` - Containerlab topology definition
 - `asym_vni.drawio.svg` - Network topology asym_vni (editable with draw.io)
-- `fcli.rc`: source this file to use [fcli](https://github.com/srl-labs/nornir-srl) in this lab]
+- `fcli.rc`: optional - source this file to use [fcli](https://github.com/srl-labs/nornir-srl) in this lab]
+- `inv/*`: optional - Ansible inventory and vars
+- `intent/*`: optional - Intent files for [Ansible playbook](https://github.com/srl-labs/intent-based-ansible-lab)
+
   
 ## Configuration
 
