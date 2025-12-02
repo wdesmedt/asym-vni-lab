@@ -32,9 +32,10 @@ sudo containerlab destroy -t topology.yml
 
 ## Lab Files
 
-- `topology.yml` - Containerlab topology definition
+- `asym-vni.clab.yml` - Containerlab topology definition
 - `asym_vni.drawio.svg` - Network topology asym_vni (editable with draw.io)
-
+- `fcli.rc`: source this file to use [fcli](https://github.com/srl-labs/nornir-srl) in this lab]
+  
 ## Configuration
 
 Refer to the individual device configurations in the lab topology file for specific VXLAN and VNI settings.
